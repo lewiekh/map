@@ -12,10 +12,10 @@ A web application built using: Javascirpt, Jquery, bootstrap, knockoutjs, Youtub
 To run the app:
 1. download all files and run the index.html using the browser
 or
-2. HTML:
+2. Or just
 <a href="https://lewiekh.github.io/map/">CLICK HERE</a>
 
 ## API Reference
 
-Foursquare API HTML:
+Foursquare API - 
 <a href="https://developer.foursquare.com/">CLICK HERE</a> for inofmration regarding the API
