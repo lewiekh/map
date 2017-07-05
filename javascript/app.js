@@ -27,11 +27,11 @@ var initialMarkers = [{
         ytVidId: "yvUbza_QQ2c"
     },
     {
-        title: "Dubai Creek Golf Club",
-        lat: 25.228596,
-        lng: 55.293267,
-        locationId: "4b0587f3f964a520e5a822e3",
-        ytVidId: "cqBPziUJW0A"
+        title: "The Dubai Fountain",
+        lat: 25.1960,
+        lng: 55.2771,
+        locationId: "4bd9b02de914a593816957fa",
+        ytVidId: "MoxxK-8MeWw"
     },
     {
         title: "Rixos The Palm Dubai",
@@ -99,7 +99,7 @@ var Location = function(data) {
         //upon a successful request the data is retreived and placed in the infowindow of markers
         success: function(data) {
             resData = data.response.venue;
-            self.photo = resData.tips.groups[0].items[0].photourl;
+            self.photo = resData.bestPhoto.prefix + "original" + resData.bestPhoto.suffix;
             self.tip = resData.tips.groups[0].items[0].text;
             self.rating = resData.rating;
             self.name = resData.name;
@@ -108,7 +108,7 @@ var Location = function(data) {
                 '" alt="' + self.name + '"style="width:304px;height:228px;">' +
                 '<iframe width="560" height="315" src="https://www.youtube.com/embed/' +
                 self.youTube() + '"frameborder="0" allowfullscreen></iframe>'+
-                '<div>Powered by: <a href="https://foursquare.com/">FourSquare</a> & <a href="https://youtuebe.com/">Youtube</a> ';
+                '<div>Powered by: <a href="https://foursquare.com/">FourSquare</a> & <a href="https://youtube.com/">Youtube</a> ';
             self.loadContent();
         },
         //upon a error response an error messeage will be placed in the infowindow
@@ -183,7 +183,6 @@ function ViewModel() {
             });
         }
     }, self);
-
 }
 //initilize and apply knockout binding using the map callback function
 function initMap() {
