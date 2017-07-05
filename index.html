@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="javascript/app.js">
+	</script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js'>
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<title></title>
+</head>
+<body>
+	<div class="sidenav" id="mySidenav">
+		<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
+		<h1 class="white" id="title">A Day In Dubai</h1><input data-bind="value: filter, valueUpdate: 'afterkeydown'" name="search" placeholder="Search Location" type="text">
+		<ul data-bind="foreach: locationList">
+			<li class="white" data-bind="text: title, click: $parent.setLocation, visible: showLocation"></li>
+		</ul>
+	</div>
+	<div id="main">
+		<div class="jumbotron text-center black">
+			<h1 class="white">A Day In Dubai</h1>
+			<p class="white">Click On the markers on the map for information or click the filter button bellow</p><span class="white" onclick="openNav()" style="font-size:30px;cursor:pointer">&#9776; Filter</span>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div id="map"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6fhBSSi6-c9w3eM18gHXW1JWP3_HFjfk&callback=initMap">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+</body>
+</html>
