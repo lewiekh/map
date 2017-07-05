@@ -103,11 +103,12 @@ var Location = function(data) {
             self.tip = resData.tips.groups[0].items[0].text;
             self.rating = resData.rating;
             self.name = resData.name;
-            self.iwContent = '<div>' + self.name + '</div>' + '<div>' + self.rating + '</div>' +
-                '<div>' + self.tip + '</div>' + '<img src="' + self.photo +
+            self.iwContent = '<div><h3>' + self.name + '</h3></div>' + '<div><h3>Guest Rating:' + self.rating + '</h3></div>' +
+                '<div><h3>Guest Tips: </h3>' + self.tip + '</div>' + '<img src="' + self.photo +
                 '" alt="' + self.name + '"style="width:304px;height:228px;">' +
                 '<iframe width="560" height="315" src="https://www.youtube.com/embed/' +
-                self.youTube() + '"frameborder="0" allowfullscreen></iframe>';
+                self.youTube() + '"frameborder="0" allowfullscreen></iframe>'+
+                '<div>Powered by: <a href="https://foursquare.com/">FourSquare</a> & <a href="https://youtuebe.com/">Youtube</a> ';
             self.loadContent();
         },
         //upon a error response an error messeage will be placed in the infowindow
@@ -136,7 +137,6 @@ var Location = function(data) {
     this.marker.addListener('click', function() {
         self.infoWindow.open(map, this);
     });
-
     //closes the infowindow
     this.marker.addListener('closeclick', function() {
         self.infoWindow.close(map, this);
