@@ -4,7 +4,7 @@ Spend a day in Dubai with us!
 
 ## Synopsis
 Have you ever wondered what a day in Dubai would look like? What whould you do there? Well we have the application for you!
-A web application built using: Javascirpt, Jquery, bootstrap, knockoutjs, Youtube videos, and the Foursquare API to give you the information needed to spend productive day in Dubai.
+A web application built using: Javascirpt, Jquery, bootstrap, knockoutjs, Youtube videos, and the Foursquare API to give you the information needed to have productive day in Dubai.
 
 
 ## Installation
