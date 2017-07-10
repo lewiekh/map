@@ -54,7 +54,7 @@ var Location = function(data) {
 	}, this);
 	this.stopBounce = function() {
 		setTimeout(function() {
-			self.marker.setAnimation(null)
+			self.marker.setAnimation(null);
 		}, 1500);
 	};
 	//opens the infowindow when the marker is clicked
@@ -112,7 +112,7 @@ function ViewModel() {
 	this.openSideNav = ko.observable(false);
 	this.expandSideNav = function() {
 		self.openSideNav(!self.openSideNav());
-	}
+	};
 }
 //initilize and apply knockout binding using the map callback function
 function initMap() {
