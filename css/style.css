@@ -1,7 +1,8 @@
-}
 body {
 	font-family: "Lato", sans-serif;
 }
+
+
 .sidenav {
 	height: 100%;
 	width: 0;
@@ -14,6 +15,13 @@ body {
 	transition: 0.5s;
 	padding-top: 60px;
 }
+
+
+.expand{
+	width:  250px !important;
+}
+
+
 .sidenav a {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
@@ -22,9 +30,13 @@ body {
 	display: block;
 	transition: 0.3s;
 }
+
+
 .sidenav a:hover, .offcanvas a:focus {
 	color: #f1f1f1;
 }
+
+
 .sidenav .closebtn {
 	position: absolute;
 	top: 0;
@@ -32,27 +44,38 @@ body {
 	font-size: 36px;
 	margin-left: 50px;
 }
+
+
 .white {
 	color: rgb(128, 128, 128);
 }
+
+
 #main {
 	height: 100%;
 	width: auto;
 	transition: margin-left .5s;
 }
+
+
 #map {
 	height: 800px;
 	width: auto;
 }
+
+
 .youtube {
 	width: 560px;
 	height: 315px;
 }
+
+
 @media screen and (max-height: 450px) {
 	.sidenav {
 		padding-top: 15px;
 	}
+
+
 	.sidenav a {
 		font-size: 18px;
 	}
-}
